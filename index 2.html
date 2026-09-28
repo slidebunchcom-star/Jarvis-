@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Zuvli Command</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<aside><div class="brand">Z<span>COMMAND</span></div><nav id="nav"></nav><div class="status">● COMMAND ONLINE</div></aside>
+<main>
+<section id="command" class="page on">
+<div class="top"><div><small>PRIVATE PROJECT COMMAND CENTER</small><h1 id="greet">Good afternoon.</h1><p>Zuvli systems are ready. What are we building today?</p></div><div class="orb" id="orb"><i></i><b>J</b></div></div>
+<div class="metrics"><div><b id="progress">0%</b><span>Project progress</span></div><div><b id="taskCount">0</b><span>Open tasks</span></div><div><b id="bugCount">0</b><span>Open bugs</span></div><div><b id="ideaCount">0</b><span>Ideas</span></div></div>
+<div class="mission"><small>CURRENT MISSION</small><h2>🚀 Make Zuvli launch-ready</h2><p>Build → Test → Market → Feedback → Improve</p></div>
+<div class="console"><div id="chat"><p class="jarvis">Command online. Try <b>“open Zuvli”</b>, <b>“add task fix Explore”</b>, <b>“show bugs”</b>, or <b>“add idea multiplayer quiz”</b>.</p></div><div class="commandbar"><button id="mic" onclick="listen()">🎙</button><input id="cmd" placeholder="Tell Command what to do…" onkeydown="if(event.key==='Enter')runCommand()"><button onclick="runCommand()">➤</button></div></div>
+</section>
+<section id="tasks" class="page"><h1>Tasks</h1><div class="adder"><input id="taskInput" placeholder="New task"><button onclick="addTask()">Add task</button></div><div id="taskList"></div></section>
+<section id="features" class="page"><h1>Feature Master</h1><p class="sub">Track each Zuvli system from idea to live.</p><div id="featureList"></div></section>
+<section id="roadmap" class="page"><h1>Roadmap</h1><div class="boards"><div><h3>🔥 NOW</h3><div id="now"></div></div><div><h3>➡ NEXT</h3><div id="next"></div></div><div><h3>🌙 LATER</h3><div id="later"></div></div></div></section>
+<section id="bugs" class="page"><h1>Bug Tracker</h1><div class="adder"><input id="bugInput" placeholder="Describe bug"><button onclick="addBug()">Add bug</button></div><div id="bugList"></div></section>
+<section id="ideas" class="page"><h1>Idea Bank</h1><div class="adder"><input id="ideaInput" placeholder="New Zuvli idea"><button onclick="addIdea()">Save idea</button></div><div id="ideaList"></div></section>
+<section id="diary" class="page"><h1>Dev Diary</h1><textarea id="diaryText" placeholder="What did you build, fix or learn today?"></textarea><button class="primary" onclick="saveDiary()">Save today's entry</button><div id="diaryList"></div></section>
+<section id="marketing" class="page"><h1>Marketing</h1><div class="cards"><div><b>🏫 School Launch</b><p>Demo, QR, feedback and teacher introduction.</p></div><div><b>📱 Social</b><p>Short videos: Zuvi, Learn, Explore and Create.</p></div><div><b>📰 Pamphlet</b><p>Explain Zuvli simply and drive users to zuvli.in.</p></div></div></section>
+<section id="settings" class="page"><h1>Command Settings</h1><label>Zuvli URL<input id="zuvliUrl"></label><label>GitHub URL<input id="githubUrl"></label><label>Coolify URL<input id="coolifyUrl" placeholder="Paste your private Coolify URL"></label><button class="primary" onclick="saveSettings()">Save links</button><p class="warn">This prototype stores project data on this browser. For real privacy across devices, add authenticated backend + database before putting sensitive information online.</p></section>
+</main><div id="toast"></div><script src="app.js"></script></body></html>
